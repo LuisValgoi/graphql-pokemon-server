@@ -1,0 +1,26 @@
+{
+  "name": "graphql-pokemon-server",
+  "version": "1.0.0",
+  "description": "Serverless function for the graphql-pokemon-ui",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify-lambda build src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisValgoi/graphql-pokemon-server.git"
+  },
+  "author": "luisvalgoi@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisValgoi/graphql-pokemon-server/issues"
+  },
+  "homepage": "https://github.com/LuisValgoi/graphql-pokemon-server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
+    "netlify-lambda": "^1.6.3",
+    "serverless-http": "^2.5.0"
+  }
+}
