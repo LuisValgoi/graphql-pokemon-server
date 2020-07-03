@@ -5,6 +5,10 @@ Serverless function for the `graphql-pokemon-ui`
 ## Status
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6d705c43-7e91-40c2-8dcf-5233de872047/deploy-status)](https://app.netlify.com/sites/graphql-pokemon-server/deploys)
 
+## Frontend
+
+https://github.com/LuisValgoi/graphql-pokemon-ui
+
 ## How to Run
 
 ```js
