@@ -12,7 +12,7 @@ yarn start
 ## Endpoints
 
 ```js
-http://.../.netlify/functions/api/v1/pokemons
+/.netlify/functions/api/v1/pokemons
 ```
 
 ## Available Scripts
