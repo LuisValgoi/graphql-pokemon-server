@@ -11,7 +11,6 @@ router.get('/v1/pokemons', (req, res) => {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 
   const nameParam = req.query.query;
-
   if (nameParam) {
     const response = {
       data: {
@@ -25,10 +24,11 @@ router.get('/v1/pokemons', (req, res) => {
 });
 
 router.get('/v1/pokemons/:id', (req, res) => {
-  const id = req.params.id;
-  const pokemon = data.data.pokemons.filter(pokemon => pokemon.id === id)[0];
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
+  const id = req.params.id;
+  const pokemon = data.data.pokemons.filter(pokemon => pokemon.id === id)[0];
   res.json(pokemon);
 });
 
