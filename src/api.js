@@ -5,16 +5,21 @@ const app = express();
 const router = express.Router();
 
 const data = require('./data/GET_POKEMONS');
+
 router.get('/v1/pokemons', (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.json(data);
 });
-router.get('/v1/pokemons/*', (req, res) => {
+
+router.get('/v1/pokemons/:id', (req, res) => {
+  const id = req.params.id;
+  const pokemon = data.data.pokemons.filter(pokemon => pokemon.id === id)[0];
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  res.json(data);
+  res.json(pokemon);
 });
+
 app.use('/.netlify/functions/api', router)
 
 module.exports.handler = serverless(app);
