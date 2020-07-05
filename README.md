@@ -32,3 +32,65 @@ yarn start
 - `express`: The node server.
 - `serverless-http`: Serverless facilitator.
 - `netlify-lambda`: Netlify function helper.
+
+## Server
+
+The data was extracted from [graphql-pokemon.now.sh](https://graphql-pokemon.now.sh/)
+
+## Query Example
+
+The following query gets the 50 first records @ database
+
+```graphql
+{
+  pokemons(first: 50) {
+    id
+    number
+    name
+    weight {
+      minimum
+      maximum
+    }
+    height {
+      minimum
+      maximum
+    }
+    classification
+    resistant
+    weaknesses
+    fleeRate
+    maxCP
+    evolutionRequirements {
+      amount
+      name
+    }
+    maxHP
+    image
+    types
+    attacks {
+      special {
+        name
+        type
+        damage
+      }
+    }
+    evolutions {
+      id
+      number
+      name
+      weight {
+        minimum
+        maximum
+      }
+      attacks {
+        fast {
+          name
+          type
+          damage
+        }
+      }
+    }
+  }
+}
+```
+
